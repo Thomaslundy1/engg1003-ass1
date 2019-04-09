@@ -2,8 +2,9 @@
 
   int main()
 {
+    int option;
   printf ("Encrypt as rotation or substitution cypher?:\n ");
-   printf("1 for rotation, 2 for substitution:\n");
+   printf("\t1 for rotation\n \t2 for substitution\n");
     scanf("%c", &option);
     
    switch (option)
