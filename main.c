@@ -12,9 +12,9 @@
     {
         case'1': //rotation cipher
         printf ("What message to encrypt as a rotation: ");
-        scanf("%d", &ms1);
+        scanf("%c", &ms1);
         printf ("Please enter key for encryption: ");
-        scanf("%d", &key);
+        scanf("%c", &key);
         break;
         
         case'2': //substitution cipher
