@@ -21,6 +21,11 @@
         printf ("What message to encrypt as a substitution: ");
         break;
         
+        case'3': //rotation cypher deencryption
+       
+        case'4': //rotation cypher deencryption
+        
+ 
         default:
         printf ("Error!");
         break;
