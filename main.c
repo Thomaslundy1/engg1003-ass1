@@ -2,12 +2,13 @@
 
   int main()
 {
-    char option;
-    int ms1, key;
-  printf (" Encrypt as rotation or substitution cypher?:\n ");
-   printf("\t1 for rotation\n \t2 for substitution\n");
+   printf ("\t What would you like to do?:\n ");
+   printf("\t 1. Rotation cypher encription\n");
+   printf("\t 2. Substitution cypher encryption\n");
+   printf("\t 3. Rotation cypher decryption\n");
+   printf("\t 4. Substitution cypher decryption\n");
+   printf("Please enter number in front of prefferred option:\n ");
     scanf("%c", &option);
-    
    switch (option)
     {
         case'1': //rotation cipher
@@ -23,7 +24,7 @@
         
         case'3': //rotation cypher deencryption
        
-        case'4': //rotation cypher deencryption
+        case'4': //substitution cypher deencryption
         
  
         default:
