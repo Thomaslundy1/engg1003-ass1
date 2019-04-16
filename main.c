@@ -17,7 +17,7 @@
         printf ("Please enter key for encryption: ");
         scanf("%c", &key);
         for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
-        ms1[n] = ms1[n] + key;
+        ms1[n] = ms1[n] + key; //this will move the letter along the cypher by the key forwards
         printf("The message is: %s . ", ms1);
         break;
         
@@ -26,6 +26,15 @@
         break;
         
         case'3': //rotation cypher deencryption
+        /*rotation cypher decription is the same as encryption except
+        for the changing of adding the key to subtracting the key */
+        printf ("What message to decrypt as a rotation:\n ");
+        scanf("%s", &ms1);
+        printf ("Please enter key for decryption: ");
+        scanf("%d", &key);
+        for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
+        ms1[n] = ms1[n] - key; //this will move the letter along the cypher by the number of the key backwards
+        printf ("Decrypted message is: %s . ", ms1);
        
         case'4': //substitution cypher deencryption
         
