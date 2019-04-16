@@ -18,7 +18,7 @@
         scanf("%c", &key);
         for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
         ms1[n] = ms1[n] + key;
-        printf("The message is: %s", ms1);
+        printf("The message is: %s . ", ms1);
         break;
         
         case'2': //substitution cipher
