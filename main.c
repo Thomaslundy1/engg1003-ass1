@@ -2,6 +2,10 @@
 
   int main()
 {
+    char option;
+    int key, n;
+    char  ms1[1024];
+    char x;	  
    printf ("\t What would you like to do?:\n ");
    printf("\t 1. Rotation cypher encryption\n");
    printf("\t 2. Substitution cypher encryption\n");
@@ -15,7 +19,7 @@
         printf ("What message to encrypt as a rotation: ");
         scanf("%s", &ms1);
         printf ("Please enter key for encryption: ");
-        scanf("%c", &key);
+        scanf("%d", &key);
         for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
        {
       x = ms1[n];
