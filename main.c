@@ -17,8 +17,36 @@
         printf ("Please enter key for encryption: ");
         scanf("%c", &key);
         for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
-        ms1[n] = ms1[n] + key; //this will move the letter along the cypher by the key forwards
-        printf("The message is: %s . ", ms1);
+       {
+      x = ms1[n];
+
+      if (x >= 'a' && x <= 'z')
+	{
+	  x = x + key;
+
+	  if (x > 'z')
+	    {
+	      x = x - 26;
+	    }
+
+	  ms1[n] = x;
+	}
+      else if (x >= 'A' && x <= 'Z')
+	{
+	  x = x + key;
+
+	  if (x > 'Z')
+	    {
+	      x = x - 26;
+	    }
+
+	  ms1[n] = x;
+	}
+        }
+        
+       
+       
+       printf("The message is: %s . ", ms1);
         break;
         
         case'2': //substitution cipher
@@ -33,7 +61,33 @@
         printf ("Please enter key for decryption: ");
         scanf("%d", &key);
         for(n = 0; n < 1024 && ms1[n] != '\0'; n++)
-        ms1[n] = ms1[n] - key; //this will move the letter along the cypher by the number of the key backwards
+        
+            {
+      x = ms1[n];
+
+      if (x >= 'a' && x <= 'z')
+	{
+	  x = x - key;
+
+	  if (x < 'a')
+	    {
+	      x = x + 26;
+	    }
+
+	  ms1[n] = x;
+	}
+      else if (x >= 'A' && x <= 'Z')
+	{
+	  x = x - key;
+
+	  if (x < 'A')
+	    {
+	      x = x + 26;
+	    }
+
+	  ms1[n] = x;
+	}
+    }
         printf ("Decrypted message is: %s . ", ms1);
        
         case'4': //substitution cypher deencryption
